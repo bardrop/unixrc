@@ -53,8 +53,11 @@ keybind = super+d=text:\x01v
 # Cmd+shift+d for horizontal split (herdr: split_horizontal = "prefix+minus")
 keybind = super+shift+d=text:\x01-
 
-# Fullscreen (Cmd+f)
-keybind = super+f=toggle_fullscreen
+# Cmd+f = search the pane scrollback.
+# Sends herdr prefix + [ (copy mode) + ? (search up). Type text, Enter,
+# then n/N to jump between hits, Esc to leave copy mode.
+# Fullscreen is no longer on Cmd+f; Ghostty's default Ctrl+Cmd+f still toggles it.
+keybind = super+f=text:\x01[?
 
 # Unbind Cmd+Enter so Rectangle can use it
 keybind = super+enter=unbind
